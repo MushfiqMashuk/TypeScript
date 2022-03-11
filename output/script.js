@@ -64,3 +64,12 @@ anyObject = {
 let anyArray = [];
 anyArray.push(5);
 anyArray.push(false);
+// Type for functions
+const myFunc = (a, b, c = "Dummy Value") => {
+    console.log(c);
+    return {};
+};
+let nice = new Function();
+myFunc("A", "B");
+console.dir(nice);
+//myFunc = 78; // error

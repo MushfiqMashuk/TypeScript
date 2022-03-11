@@ -107,3 +107,18 @@ let anyArray: any[] = [];
 
 anyArray.push(5);
 anyArray.push(false);
+
+// Type for functions
+
+const myFunc: Function = (a: string, b: string, c: string = "Dummy Value"): object => {
+
+  console.log(c);
+
+  return {};
+};
+
+let nice: Function = new Function();
+myFunc("A", "B");
+console.dir(nice);
+
+//myFunc = 78; // error
