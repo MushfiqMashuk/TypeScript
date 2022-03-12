@@ -1,10 +1,10 @@
 "use strict";
 function printName(person) {
-  console.log(person.name);
+    console.log(person.name);
 }
 printName({ name: "Mashuk", age: 34 });
 function printId(id) {
-  console.log(id);
+    console.log(id);
 }
 printId(45);
 // Function signature
@@ -15,11 +15,11 @@ console.log(calc(4, 5));
 let authenticate;
 //console.log(authenticate); // Gives us error. output: undefined
 const user1 = {
-  name: "Mashuk",
-  id: "CSE 064 07578",
-  age: 67,
+    name: "Mashuk",
+    id: "CSE 064 07578",
+    age: 67,
 };
 authenticate = (id, user) => {
-  return id === user.id;
+    return id === user.id;
 };
 console.log(authenticate("CSE 064 07578", user1));
