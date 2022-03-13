@@ -29,3 +29,43 @@ export class Avenger implements AvengerInterface {
     console.log(`${this.name} is a Superhero in ${this.universe} Universe`);
   }
 }
+
+function getSomething<Type extends { name: string }>(props: Type) {
+  console.log(props);
+}
+
+getSomething({ name: 67 });
+
+interface APIResponse<Type> {
+  status: number;
+  message: string;
+  data: Type;
+}
+
+const apiresponse: APIResponse<string> = {
+  status: 200,
+  message: "Ok",
+  data: "nice",
+};
+
+console.log(apiresponse.data);
+
+// Enums
+
+enum SuccessCodes {
+  Success = 200,
+  ServerError = 500,
+  UnAuthenticated = 401,
+}
+
+console.log(SuccessCodes.UnAuthenticated);
+
+
+// Tupples
+
+const mixedArray:[number, string, object] = [23, "abc", {}];
+
+mixedArray.push(1);
+
+console.log(mixedArray);
+
